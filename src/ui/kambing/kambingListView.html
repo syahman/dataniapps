@@ -1,0 +1,24 @@
+<div id="groupListView" 
+data-role="view" 
+data-layout="default" 
+data-model="wrn.groupList.viewModel"
+data-bind="events:{init:init,afterShow:afterShow}"
+>
+	<header data-role="header">
+		<div data-role="navbar">
+                    <!--<a data-align="left" class="primaryBtn" href="#addGroupView" data-icon="delete" data-role="button" data-bind="events:{click:forceNoneEditModeIfNeeded}"></a>-->
+			<!--<a data-align="left" class="editGroupBtn defaultBtn" data-role="button" data-bind="events:{click:editMode},invisible:hasGroups"><span data-bind="text: editButtonText">edit</span></a>-->
+			<span data-role="view-title">DA-TANI</span>
+			<!--<a data-align="right" class="primaryBtn" href="#addGroupView" data-icon="delete" data-role="button" data-bind="events:{click:forceNoneEditModeIfNeeded}"></a>-->
+		</div>
+	</header>
+
+	<div class="well" style="border-radius:1; border-color: red;" data-bind="invisible:hasGroups">
+		Kambing
+        </div>
+
+    <div class="alert alert-info text-center" data-bind="invisible:noGroups">click + to add a group</div>
+
+       
+    
+</div>
