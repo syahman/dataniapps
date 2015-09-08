@@ -1,9 +1,16 @@
-whats-er-name - [Kendo UI](http://docs.telerik.com/kendo-ui/mobile/introduction) mobile web app 
+33 JAM HACKATON 2015 : DATA TERBUKA SEKTOR AWAM 
 ==================
 
-The whats-er-name app captures head-shots and names for the purpose of memorizing a group of peoples names (really, can be used to remember any image you to want group and name). I conjured up this application to help me memorize the names of each child on my son's football team. The applications functionality provides a UI to create a group, then enter a name and head shot (taken with camera or pull in a photo already taken) for each person in the group. The point of the application is to create a [sideshow](http://demos.telerik.com/kendo-ui/scrollview/index) of named photos for memorizing faces and names.
 
-This application was created using Kendo UI Mobile widgets and application tools. It is the example application used in the ["Kendo UI Mobile Guide"](https://github.com/telerik/kendo-ui-mobile-guide).
+Aplikasi “Da-Tani” atau Data Tani adalah aplikasi yang akan membantu para petani, penternak dan nelayan atau mereka yang berminat dengan Agro Pertanian untuk mendapatkan maklumat setempat tentang statistik, trend dan jangkaan dalam bidang pertanian.
+
+
+DA-TANI SKELETON (KENDO UI MOBILE) 
+
+Instruction to team #codehijau. 
+
+This is not a complete skeleton yet. I will update all the structure. But, basically it's already resembled our apps layout. 
+
 
 ## Prerequisites to run/build app
 
@@ -49,4 +56,6 @@ $ gulp prod
 This task will take files from `wwwDev` directory and produce a production ready version of the application saved in the `wwwProd` directory. This command also will spin up a server, open a browser, and serve the production ready files at http://localhost:3028. This command must be manually re-run, it's not being watched for changes in the src files. You can kill the server using Ctrl + C.
 
 Do a build only after you have run `gulp dev` at least once and the `wwwProd` directory has been created.
+
+
 
