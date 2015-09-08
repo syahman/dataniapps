@@ -1,0 +1,11 @@
+.well{
+	background-color: #fff;
+	border: none;
+	margin-bottom: 0;
+}
+
+.alert{border-radius: 0;}
+
+.list-group-item{
+	padding:0;
+}

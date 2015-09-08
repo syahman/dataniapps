@@ -1,0 +1,43 @@
+.km-flat .km-view .km-content {
+    background-color: rgb(255, 255, 255);
+}
+
+.km-flat .km-switch-handle,
+.km-flat .k-slider-selection,
+.km-flat .km-switch-background {
+	color: #428BCA;
+}
+.km-flat .km-rowinsert,
+.km-flat .km-state-active,
+.km-flat .km-scroller-pull,
+.km-flat .km-loader:before,
+.km-flat .k-slider-selection,
+.km-flat .km-touch-scrollbar,
+.km-flat .km-pages .km-current-page,
+.km-flat .k-slider .k-draghandle,
+.km-flat .k-slider .k-draghandle:hover,
+.km-flat .km-tabstrip .km-state-active,
+.km-flat .km-scroller-refresh.km-load-more,
+.km-flat .km-popup .k-state-hover,
+.km-flat .km-popup .k-state-focused,
+.km-flat .km-popup .k-state-selected,
+.km-flat .km-actionsheet > li > a:active,
+.km-flat .km-actionsheet > li > a:hover,
+.km-flat .km-actionsheet > li > .km-state-active,
+.km-flat li.km-state-active .km-listview-link,
+.km-flat li.km-state-active .km-listview-label,
+.km-flat .km-listview-label input[type=radio]:checked,
+.km-flat .km-listview-label input[type=checkbox]:checked {
+	background: #428BCA;
+}
+.km-flat .km-filter-wrap > input:focus {
+	border-color: #428BCA;
+}
+
+.km-root a{
+	color: #428bca;
+}
+
+.km-flat, .km-flat .km-navbar, .km-flat .k-toolbar, .km-flat .km-detail, .km-flat .km-content {
+background-color: #fff; 
+}

@@ -1,0 +1,16 @@
+{
+  "name": "whatsername",
+  "version": "1.0.0",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "node_modules"
+  ],
+  "dependencies": {
+    "kendo-ui": "~2014.3.1316",
+    "jquery": "~2.1.1",
+    "bootstrap": "~3.3.0",
+    "lodash": "~2.4.1",
+    "canvasResize": "https://github.com/gokercebeci/canvasResize.git#~1.2.0"
+  }
+}
