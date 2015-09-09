@@ -1,18 +1,41 @@
 <div id="kambingListView" 
-data-role="view" 
-data-layout="default" 
+     data-role="view" 
+     data-layout="default" 
+     >
+    <header data-role="header">
+        <div data-role="navbar">             
+            <a data-role="button" href="dashboardView"  data-icon="home" data-align="left" style="border: 1; background: inherit; "></a>
+            <span data-role="view-title">Kambing</span>            
+        </div>
+    </header>
+    <div class="panel panel-default bootcards-summary">
 
->
-	<header data-role="header">
-		<div data-role="navbar">
-                    <!--<a data-align="left" class="primaryBtn" href="#addGroupView" data-icon="delete" data-role="button" data-bind="events:{click:forceNoneEditModeIfNeeded}"></a>-->
-			<!--<a data-align="left" class="editGroupBtn defaultBtn" data-role="button" data-bind="events:{click:editMode},invisible:hasGroups"><span data-bind="text: editButtonText">edit</span></a>-->
-			<span data-role="view-title">DA-TANI</span>
-			<!--<a data-align="right" class="primaryBtn" href="#addGroupView" data-icon="delete" data-role="button" data-bind="events:{click:forceNoneEditModeIfNeeded}"></a>-->
-		</div>
-	</header>
+        <div class="panel-heading">
+            <h3 class="panel-title" style="text-align: center">Data Analisa</h3>
+        </div>
 
-	
-       <div>kambing</div>
-    
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12">
+                    <a class="bootcards-summary-item" href="#maklumatKambingView">
+                        <i class="fa fa-3x fa-question-circle"  style="color:green;"></i>
+                        <h3><span style="font-size: 16px; font-weight: bolder; color:black;">Maklumat Ternakan Kambing</span></h3>
+                    </a>
+                </div>
+                <div class="col-xs-12 col-sm-12">
+                    <a class="bootcards-summary-item" href="#populasiKambingView">
+                        <i class="fa fa-3x fa-object-group"  style="color:green;"></i>
+                        <h3><span style="font-size: 16px; font-weight: bolder; color:black;">Populasi Ternakan Kambing</span></h3>
+                    </a>
+                </div>
+                <div class="col-xs-12 col-sm-12">
+                    <a class="bootcards-summary-item" href="#keseluruhanKambingView">
+                        <i class="fa fa-3x fa-object-ungroup"  style="color:green;"></i>
+                        <h3><span style="font-size: 16px; font-weight: bolder; color:black;">Populasi Ternakan Kambing Di Malaysia</span></h3>
+                    </a>
+                </div>            
+            </div>
+        </div>
+    </div>
 </div>
+

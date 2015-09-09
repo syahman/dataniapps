@@ -1,0 +1,71 @@
+<div id="maklumatKerbauView" 
+     data-role="view" 
+     data-layout="default"
+     >
+    <header data-role="header">
+        <div data-role="navbar">                                  
+            <a data-role="button" href="kerbauListView"  data-icon="home" data-align="left" style="border: 1; background: inherit; "></a>
+            <span data-role="view-title">Kerbau</span>            
+        </div>
+    </header>   
+
+    <!--<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    Load the AJAX API-->
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+        google.load('visualization', '1.0', {'packages': ['corechart']});
+
+        function drawSheetKerbauMaklumat(val) {
+            var queryString = encodeURIComponent("SELECT A, " + val);
+            var query = new google.visualization.Query(
+                    'https://docs.google.com/spreadsheets/d/1J7J58i5g_7Q17G2Z-KpJLkJNrLZlYdiQfeZ37ioPHO8/gviz/tq?sheet=maklumat_ternakan_kerbau&headers=1&tq=' + queryString
+                    );
+            query.send(handleSampleDataQueryResponseKerbauMaklumat);
+        }
+
+        function handleSampleDataQueryResponseKerbauMaklumat(response) {
+            if (response.isError()) {
+                alert('Error in query: ' + response.getMessage() + ' ' + response.getDetailedMessage());
+                return;
+            }
+
+            var data = response.getDataTable();
+            //console.log(data);
+            var chart = new google.visualization.ComboChart(document.getElementById('chart_div_kerbau_maklumat'));
+            var options = {
+                //title:"Maklumat Ternakan Kerbau, 2009 - 2014 \n",
+                width: '100%',
+                height: 400,
+                legend: 'bottom',
+                seriesType: 'bars',
+                series: {
+                    0: {type: "bars", targetAxisIndex: 0},
+                    1: {type: "line", targetAxisIndex: 1, pointSize: 5},
+                },
+                vAxes: {0: {title: 'Kuantiti (Ekor/Tan Matrik)'}, 1: {title: 'Nilai (RM Juta)'}}
+            };
+            chart.draw(data, options);
+        }
+    </script>
+
+    <select id="jenisKerbauMaklumat" class="form-control well-sm" style="margin: 2px; width: 95%">
+        <option>--Pilih Kategori--</option>
+        <option value="B, C" data-title="Import Kerbau Hidup">
+            Import Kerbau Hidup</option>						
+        <option disabled="true" class="disabled" data-title="Export Kerbau Hidup">
+            Export Kerbau Hidup (Tiada Maklumat)</option>			
+        <option value="D, E" data-title="Import Kerbau Daging">
+            Import Kerbau Daging</option>						
+        <option disabled="true" class="disabled" data-title="Export Kerbau Daging">
+            Export Kerbau Daging (Tiada Maklumat)</option>			             
+        <option value="F, G" data-title="Pengeluran Daging Kerbau Tempatan">
+            Pengeluran Daging Kerbau Tempatan</option>			             
+        <option value="H" data-title="Populasi Kerbau">Populasi Kerbau</option>	
+    </select>
+    <div class="panel">
+        <div class="panel-heading">
+            <h4 id="chart-title-kerbau-maklumat" style="text-align:center"></h4>
+        </div>
+        <div id="chart_div_kerbau_maklumat"></div>
+    </div>    
+</div>

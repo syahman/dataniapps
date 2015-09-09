@@ -1,0 +1,72 @@
+<div id="maklumatBabiView" 
+     data-role="view" 
+     data-layout="default"
+     >
+    <header data-role="header">
+        <div data-role="navbar">                                  
+            <a data-role="button" href="kambingListView"  data-icon="home" data-align="left" style="border: 1; background: inherit; "></a>
+            <span data-role="view-title">Babi</span>            
+        </div>
+    </header>   
+
+    <!--<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    Load the AJAX API-->
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+            google.load('visualization', '1.0', {'packages': ['corechart']});
+
+            function drawSheetBabiMaklumat(val) {                
+                var queryString = encodeURIComponent("SELECT A, " + val);
+                var query = new google.visualization.Query(
+                        'https://docs.google.com/spreadsheets/d/1J7J58i5g_7Q17G2Z-KpJLkJNrLZlYdiQfeZ37ioPHO8/gviz/tq?sheet=maklumat_ternakan_babi&headers=1&tq=' + queryString
+                        );
+                query.send(handleSampleDataQueryResponseBabiMaklumat);
+            }
+
+            function handleSampleDataQueryResponseBabiMaklumat(response) {
+                if (response.isError()) {
+                    alert('Error in query: ' + response.getMessage() + ' ' + response.getDetailedMessage());
+                    return;
+                }
+
+                var data = response.getDataTable();
+                //console.log(data);
+                var chart = new google.visualization.ComboChart(document.getElementById('chart_div_babi_maklumat'));
+                var options = {
+                    //title:"Maklumat Ternakan Babi, 2009 - 2014 \n",
+                    width: '100%',
+                    height: 400,
+                    legend: 'bottom',
+                    seriesType: 'bars',
+                    series: {
+                        0: {type: "bars", targetAxisIndex: 0},
+                        1: {type: "line", targetAxisIndex: 1, pointSize: 5},
+                    },
+                    vAxes: {0: {title: 'Kuantiti (Ekor/Tan Matrik)'}, 1: {title: 'Nilai (RM Juta)'}}
+                };
+                chart.draw(data, options);
+            }
+        </script>
+
+    <select id="jenisBabiMaklumat" class="form-control well-sm" style="margin: 2px; width: 95%">
+        <option>--Pilih Kategori--</option>
+        <option value="B, C" data-title="Import Babi Hidup">
+            Import Babi Hidup</option>						
+        <option value="D, E" data-title="Export Babi Hidup">
+            Export Babi Hidup</option>			
+        <option value="F, G" data-title="Import Babi Daging">
+            Import Babi Daging</option>						
+        <option value="H, I" data-title="Export Babi Daging">
+            Export Babi Daging</option>			             
+        <option value="J, K" data-title="Pengeluran Daging Babi Tempatan">
+            Pengeluran Daging Babi Tempatan</option>			             
+        <option value="M" data-title="Populasi Babi">Populasi Babi</option>			
+
+    </select>
+    <div class="panel">
+        <div class="panel-heading">
+            <h4 id="chart-title-babi-maklumat" style="text-align:center"></h4>
+        </div>
+        <div id="chart_div_babi_maklumat"></div>
+    </div>    
+</div>
