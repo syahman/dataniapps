@@ -39,6 +39,12 @@
 
      <!-- layouts CSS -->
      <link href="/shared/layouts/global/globalLayout.css" rel="stylesheet"/>
+     
+     
+     
+     
+     <link href="/ui/welcome/welcome.css" rel="stylesheet"/>
+     
 
     <!-- endbuild -->
 
@@ -56,41 +62,51 @@
     <!--@@include('./ui/nameViewer/viewer/scrollerTemplate.html')-->
 
     <!-- views -->
-    @@include('./ui/appInfo/appInfoView.html')
-    @@include('./ui/groups/groupList/groupListView.html')
-    @@include('./ui/groups/addGroup/addGroupView.html')
-    @@include('./ui/nameViewer/addName/addNameView.html')
-    @@include('./ui/nameViewer/viewer/viewerView.html')
-    
-    <!-- datani views -->
-    
-    <!-- welcome -->
-    @@include('./ui/welcome/welcomeView.html')
-    
-    <!-- dashboard -->
-    @@include('./ui/dashboard/dashboardView.html')
+ 
+   <!-- datani views -->
     
     <!-- ayam itik -->
     @@include('./ui/ayam/ayamListView.html')
     
-    <!-- ikan -->
-    @@include('./ui/ikan/ikanListView.html')
     
-    
+      
     <!-- bebiri/kambing -->
     @@include('./ui/bebiri/bebiriListView.html')
     
-    <!-- sayuran -->
-    @@include('./ui/sayuran/sayuranListView.html')
-      
-    <!-- pasar tani -->
-    @@include('./ui/ptani/ptaniListView.html')
     
-    <!-- persatuan -->
-    @@include('./ui/persatuan/persatuanListView.html')
+     
+    <!-- dashboard -->
+    @@include('./ui/dashboard/dashboardView.html')
     
+     
     <!-- fakta menarik -->
      @@include('./ui/fakta/faktaListView.html')
+     
+    <!-- ikan -->
+    @@include('./ui/ikan/ikanListView.html')
+    
+      <!-- komoditi -->
+    @@include('./ui/komoditi/komoditiListView.html'
+    
+    
+    <!-- kredit -->
+    @@include('./ui/kredit/kreditListView.html'
+    
+    
+    <!-- persatuan -->
+    @@include('./ui/persatuan/persatuanListView.html'
+    
+   
+    <!-- pasar tani -->
+    @@include('./ui/ptani/ptaniListView.html'
+    
+    <!-- sayuran -->
+    @@include('./ui/sayuran/sayuranListView.html'
+    
+    <!-- welcome -->
+    @@include('./ui/welcome/welcomeView.html')
+   
+    
 
     <!-- global layouts -->
     @@include('./shared/layouts/global/globalLayout.html')
@@ -114,7 +130,7 @@
 
 <!-- endbuild -->
 
-<!-- build:js whatsername.js -->
+<!-- build:js datani.js -->
 
 <!-- utilities : Must run before models & viewModels-->
 <script src="/shared/utilities/googleChart.js"></script>
@@ -130,6 +146,43 @@
 <!--<script src="/ui/groups/addGroup/addGroupViewModel.js"></script>-->
 <!--<script src="/ui/nameViewer/viewer/viewerViewModel.js"></script>-->
 <!--<script src="/ui/nameViewer/addName/addNameViewModel.js"></script>-->
+
+
+<!-- ayam --> 
+<script src="/ui/ayam/ayamListView.js"></script>
+
+<!-- bebiri --> 
+<script src="/ui/bebiri/bebiriListView.js"></script>
+
+<!-- dashboard --> 
+<script src="/ui/dashboard/dashboardView.js"></script>
+
+<!-- fakta --> 
+<script src="/ui/fakta/faktaListView.js"></script>
+
+<!-- ikan --> 
+<script src="/ui/ikan/ikanListView.js"></script>
+
+<!-- komoditi --> 
+<script src="/ui/komoditi/komoditiListView.js"></script>
+
+<!-- kredit --> 
+<script src="/ui/kredit/kreditListView.js"></script>
+
+<!-- persatuan --> 
+<script src="/ui/persatuan/persatuanListView.js"></script>
+
+<!-- pasar tani --> 
+<script src="/ui/ptani/ptaniListView.js"></script>
+
+
+<!-- sayuran --> 
+<script src="/ui/sayuran/sayuranListView.js"></script>
+
+<!-- welcome --> 
+<script src="/ui/welcome/welcomeView.js"></script>
+
+
 
 <!-- endbuild -->
 
