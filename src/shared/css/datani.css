@@ -161,3 +161,10 @@
   content: "\E077";
 }
 
+.km-back:after,
+.km-back:before
+ {
+        content: "\e013";
+ }
+
+

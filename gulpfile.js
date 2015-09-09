@@ -71,6 +71,10 @@ gulp.task('buildFromDev', function () {
         .pipe(gulp.dest('./wwwProd'));
 });
 
+
+
+
+
 gulp.task('moveKendoImages', function(){
     return gulp.src(['./wwwDev/bower_components/kendo-ui/styles/images/**/*.*'])
         .pipe(gulp.dest('./wwwProd/thirdparty/images'));

@@ -1,0 +1,156 @@
+
+
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+.module-card-wrap {
+  max-width: 70%;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  
+}
+
+.module-card {
+  background: #fff;
+  border: 1px solid #f1f1f1;
+  box-shadow: 1px 1px 2px rgba(0,0,0,0.05);
+  min-width: 100%;
+  padding: 10px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.module-card-title {
+  font-size: 120%; 
+  font-weight: 700;
+}
+
+.module-card-meta {
+  display: flex;
+}
+
+.module-card-category, .module-card-author {
+  flex: 1;
+}
+
+.module-card-author {
+  text-align: right;
+}
+
+.module-card-bottom {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* a flex: 1 also works here, but is buggy on IE11 */
+}
+
+.module-card-img {
+  margin: 20px 0;
+  align-self: center;
+  width: 100%;
+  height: auto;
+}
+
+.module-card-button {
+  background: seagreen;
+  color: white;
+  border: none;
+  margin-top: auto;
+  padding: 10px;
+}
+
+
+
+/* icon moon*/
+
+@font-face {
+	font-family: 'icomoon';
+	src:url('/fonts/icomoon.eot?dq7k9u');
+	src:url('/fonts/icomoon.eot?#iefixdq7k9u') format('embedded-opentype'),
+		url('/fonts/icomoon.ttf?dq7k9u') format('truetype'),
+		url('/fonts/icomoon.woff?dq7k9u') format('woff'),
+		url('/fonts/icomoon.svg?dq7k9u#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-carrot:before {
+	content: "\e600";
+}
+.icon-chicken:before {
+	content: "\e601";
+}
+.icon-cow:before {
+	content: "\e602";
+}
+.icon-market:before {
+	content: "\e603";
+}
+.icon-sheep:before {
+	content: "\e604";
+}
+.icon-fish:before {
+	content: "\e605";
+}
+.icon-goat:before {
+	content: "\e606";
+}
+.icon-human:before {
+	content: "\e607";
+}
+.icon-plant:before {
+	content: "\e608";
+}
+.icon-marketing:before {
+	content: "\e609";
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 600px) {
+  .module-card {
+    width: 48%;
+    margin: 0 auto 2%;
+    min-width: 0;
+  }
+}
+
+
+
+
+
+
+
