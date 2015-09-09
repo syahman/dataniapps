@@ -22,6 +22,7 @@
     <link href="/bower_components/kendo-ui/src/styles/mobile/kendo.mobile.flat.css" rel="stylesheet"/>
     
     <link href="/shared/css/bootcards-android.min.css" rel="stylesheet" type="text/css"/>
+    
     <link href="/shared/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
     
     <!-- Bootcards CSS for Android: -->
@@ -74,7 +75,41 @@
 
     <!-- views -->
     @@include('./ui/ayam/ayamListView.html')
-    @@include('./ui/bebiri/bebiriListView.html')
+    
+    
+   
+    
+    <!-- kambing -->
+        @@include('./ui/kambing/kambingListView.html')
+        @@include('./ui/kambing/maklumatKambingView.html')
+        @@include('./ui/kambing/populasiKambingView.html')
+        @@include('./ui/kambing/keseluruhanKambingView.html')
+
+        <!-- bebiri -->
+        @@include('./ui/bebiri/bebiriListView.html')
+        @@include('./ui/bebiri/maklumatBebiriView.html')
+        @@include('./ui/bebiri/populasiBebiriView.html')
+        @@include('./ui/bebiri/keseluruhanBebiriView.html')
+
+        <!-- lembu -->
+        @@include('./ui/lembu/lembuListView.html')    
+        @@include('./ui/lembu/maklumatLembuView.html')
+        @@include('./ui/lembu/populasiLembuView.html')
+        @@include('./ui/lembu/keseluruhanLembuView.html')
+
+        <!-- kerbau -->
+        @@include('./ui/kerbau/kerbauListView.html')    
+        @@include('./ui/kerbau/maklumatKerbauView.html')
+        @@include('./ui/kerbau/populasiKerbauView.html')
+        @@include('./ui/kerbau/keseluruhanKerbauView.html')
+
+        <!-- babi -->
+        @@include('./ui/babi/babiListView.html')    
+        @@include('./ui/babi/maklumatBabiView.html')
+        @@include('./ui/babi/populasiBabiView.html')
+        @@include('./ui/babi/keseluruhanBabiView.html')
+    
+    
     @@include('./ui/dashboard/dashboardView.html')
     @@include('./ui/fakta/faktaListView.html')
     
@@ -150,6 +185,10 @@
 
 
 <script src="/ui/bebiri/bebiriListView.js"></script>
+        <script src="/ui/babi/babiListView.js"></script>
+        <script src="/ui/kambing/kambingListView.js"></script>
+        <script src="/ui/lembu/lembuListView.js"></script>
+        <script src="/ui/kerbau/kerbauListView.js"></script>
 
 
 <script src="/ui/dashboard/dashboardView.js"></script>
