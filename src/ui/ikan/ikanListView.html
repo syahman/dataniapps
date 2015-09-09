@@ -5,14 +5,22 @@ data-layout="default"
 >
 	<header data-role="header">
 		<div data-role="navbar">
-                    <!--<a data-align="left" class="primaryBtn" href="#addGroupView" data-icon="delete" data-role="button" data-bind="events:{click:forceNoneEditModeIfNeeded}"></a>-->
-			<!--<a data-align="left" class="editGroupBtn defaultBtn" data-role="button" data-bind="events:{click:editMode},invisible:hasGroups"><span data-bind="text: editButtonText">edit</span></a>-->
-			<span data-role="view-title">DA-TANI</span>
+                    
+              
+			  <a data-role="button" href="dashboardView"  data-icon="home" data-align="left" style="border: 1; background: inherit; "></a>
+			<span data-role="view-title">IKAN</span>
 			<!--<a data-align="right" class="primaryBtn" href="#addGroupView" data-icon="delete" data-role="button" data-bind="events:{click:forceNoneEditModeIfNeeded}"></a>-->
 		</div>
 	</header>
 
 	
-       <div>ikan</div>
+     <ul data-role="listview" data-style="inset" data-type="group">
+        <li>Analisa Berkaitan Ikan
+          <ul>
+            <li><a href="#ikanHargaIkan">Harga Ikan</a></li>
+            <li><a href="#ikanPanduanNelayan">Panduan Nelayan</a></li>
+          </ul>
+        </li>
+      </ul>
     
 </div>

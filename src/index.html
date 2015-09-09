@@ -48,6 +48,7 @@
      
      
      <link href="/ui/welcome/welcome.css" rel="stylesheet"/>
+      <link href="/ui/dashboard/dashboard.css" rel="stylesheet"/>
      
 
     <!-- endbuild -->
@@ -62,56 +63,28 @@
     -->
 
     <!-- templates -->
+    
     <!--@@include('./ui/groups/groupList/groupListItemTemplate.html')-->
     <!--@@include('./ui/nameViewer/viewer/scrollerTemplate.html')-->
 
     <!-- views -->
- 
-   <!-- datani views -->
-    
-    <!-- ayam itik -->
     @@include('./ui/ayam/ayamListView.html')
-    
-    
-      
-    <!-- bebiri/kambing -->
     @@include('./ui/bebiri/bebiriListView.html')
-    
-    
-     
-    <!-- dashboard -->
     @@include('./ui/dashboard/dashboardView.html')
+    @@include('./ui/fakta/faktaListView.html')
     
-     
-    <!-- fakta menarik -->
-     @@include('./ui/fakta/faktaListView.html')
-     
-    <!-- ikan -->
     @@include('./ui/ikan/ikanListView.html')
+    @@include('./ui/ikan/ikanHargaIkan.html')
+    @@include('./ui/ikan/ikanPanduanNelayan.html')
     
-      <!-- kambing -->
+    
+    
     @@include('./ui/kambing/kambingListView.html')
-    
-    
-      <!-- komoditi -->
     @@include('./ui/komoditi/komoditiListView.html')
-    
-    
-    <!-- kredit -->
     @@include('./ui/kredit/kreditListView.html')
-    
-    
-    <!-- persatuan -->
     @@include('./ui/persatuan/persatuanListView.html')
-    
-   
-    <!-- pasar tani -->
-    @@include('./ui/ptani/ptaniListView.html')
-    
-    <!-- sayuran -->
+
     @@include('./ui/sayuran/sayuranListView.html')
-    
-    <!-- welcome -->
     @@include('./ui/welcome/welcomeView.html')
    
     
@@ -160,53 +133,52 @@
 <!--<script src="/ui/nameViewer/addName/addNameViewModel.js"></script>-->
 
 
-<!-- ayam --> 
+
 <script src="/ui/ayam/ayamListView.js"></script>
 
-<!-- bebiri --> 
+
 <script src="/ui/bebiri/bebiriListView.js"></script>
 
-<!-- dashboard --> 
+
 <script src="/ui/dashboard/dashboardView.js"></script>
 
-<!-- fakta --> 
+
 <script src="/ui/fakta/faktaListView.js"></script>
 
-<!-- ikan --> 
+
 <script src="/ui/ikan/ikanListView.js"></script>
 
 
-<!-- kambing --> 
+
 <script src="/ui/kambing/kambingListView.js"></script>
 
-<!-- komoditi --> 
+
 <script src="/ui/komoditi/komoditiListView.js"></script>
 
-<!-- kredit --> 
+
 <script src="/ui/kredit/kreditListView.js"></script>
 
-<!-- persatuan --> 
+
 <script src="/ui/persatuan/persatuanListView.js"></script>
 
-<!-- pasar tani --> 
-<script src="/ui/ptani/ptaniListView.js"></script>
 
 
-<!-- sayuran --> 
+
 <script src="/ui/sayuran/sayuranListView.js"></script>
 
-<!-- welcome --> 
 <script src="/ui/welcome/welcomeView.js"></script>
 
 
 
 <!-- endbuild -->
 
+
+
 <!-- run application  -->
 <script>
 dt.app = new kendo.mobile.Application(document.body, { //document.body is default, but I'm being explicit
     skin: 'flat',
-    initial: 'welcomeView', // splash screen and apps information
+    initial: 'dashboardView', // splash screen and apps information
     init: function() {
         //fix mouse events in iOS don't do it for android, causes more issues than it fixes
         kendo.UserEvents.defaultThreshold(kendo.support.mobileOS.device === 'android' ? 0:20);
