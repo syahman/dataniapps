@@ -30,7 +30,8 @@ function createList(worksheetID) {
         $(entry).each(function () {
             list += '<div id="listPtani_' + (bil++) + '" class="list-ptani list-group-item" style="padding: 8px;">' +
                     '<b>Pasar Tani ' + this.gsx$tempat.$t + '</b>';
-            if (worksheetID === "o35xmrb") {
+
+            if (typeof this.gsx$latitude !== 'undefined') {
                 list += '<span class="pull-right">' +
                         '<a href="geo://' + this.gsx$latitude.$t + ',' + this.gsx$longitude.$t + '">' +
                         '<span class="fa fa-5x fa-location-arrow"></span>' +
