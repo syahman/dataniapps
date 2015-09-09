@@ -72,6 +72,10 @@ gulp.task('buildFromDev', function () {
 });
 
 
+gulp.task('moveFonts', function(){
+    return gulp.src(['./wwwDev/fonts/**/*.*'])
+        .pipe(gulp.dest('./wwwProd/fonts'));
+});
 
 
 
@@ -174,6 +178,6 @@ gulp.task('dev', function(callback) {
 });
 
 gulp.task('prod', function(callback) {
-    runSequence('cleanProd','buildFromDev','cssLint','htmlHint','jsHint','minifyHtml','minifyCss','minifyJs','moveKendoImages','moveKendoFlatTheme','moveBootstrapCSSStuff','reportSize','startProductionServer', callback);
+    runSequence('cleanProd','buildFromDev','cssLint','htmlHint','jsHint','minifyHtml','minifyCss','minifyJs','moveKendoImages','moveFonts','moveKendoFlatTheme','moveBootstrapCSSStuff','reportSize','startProductionServer', callback);
     return false;
 });
