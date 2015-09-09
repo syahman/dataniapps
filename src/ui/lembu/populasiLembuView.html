@@ -1,0 +1,79 @@
+<div id="populasiLembuView" 
+     data-role="view" 
+     data-layout="default"
+     >
+    <header data-role="header">
+        <div data-role="navbar">
+            <!--<a data-align="left" class="primaryBtn" href="#addGroupView" data-icon="delete" data-role="button" data-bind="events:{click:forceNoneEditModeIfNeeded}"></a>-->
+            <!--<a data-align="left" class="editGroupBtn defaultBtn" data-role="button" data-bind="events:{click:editMode},invisible:hasGroups"><span data-bind="text: editButtonText">edit</span></a>-->
+            <!--<span data-role="view-title">DA-TANI</span>-->
+            <a data-align="left" class="primaryBtn" data-icon="home" data-role="backbutton"></a>
+            <span data-role="view-title">Lembu</span>
+            <!--<a data-align="right" class="primaryBtn" href="#addGroupView" data-icon="delete" data-role="button" data-bind="events:{click:forceNoneEditModeIfNeeded}"></a>-->
+        </div>
+    </header>    
+
+    <!--<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    Load the AJAX API-->
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+        google.load('visualization', '1.0', {'packages': ['corechart']});
+
+        function drawSheetLembuPopulasi(val) {
+            var queryString = encodeURIComponent("SELECT A, " + val);
+            var query = new google.visualization.Query(
+                    'https://docs.google.com/spreadsheets/d/1J7J58i5g_7Q17G2Z-KpJLkJNrLZlYdiQfeZ37ioPHO8/gviz/tq?sheet=populasi_ternakan_lembu&headers=1&tq=' + queryString
+                    );
+            query.send(handleSampleDataQueryResponseLembuPopulasi);
+        }
+
+        function handleSampleDataQueryResponseLembuPopulasi(response) {
+            if (response.isError()) {
+                alert('Error in query: ' + response.getMessage() + ' ' + response.getDetailedMessage());
+                return;
+            }
+
+            var data = response.getDataTable();
+            //console.log(data);
+            var chart = new google.visualization.ComboChart(document.getElementById('chart_div_lembu_populasi'));
+            var options = {
+                //title:"Maklumat Ternakan Lembu, 2009 - 2014 \n",
+                width: '100%',
+                height: 400,
+                legend: 'bottom',
+                seriesType: 'bars',
+                series: {
+                    0: {type: "bars", targetAxisIndex: 0},
+                    //1:{type: "line", targetAxisIndex: 1, pointSize:5},
+                },
+                vAxes: {0: {title: 'Kuantiti (Ekor/Tan Matrik)'}, 1: {title: 'Nilai (RM Juta)'}}
+            };
+            chart.draw(data, options);
+        }
+    </script>
+
+    <select id="jenisLembuNegeri" class="form-control well-sm" style="margin: 2px; width: 95%">
+        <option>--Pilhan--</option>
+        <option value="B" data-title="Johor">Johor</option>
+        <option value="C" data-title="Kedah">Kedah</option>
+        <option value="D" data-title="Kelantan">Kelantan</option>
+        <option value="E" data-title="Melaka">Melaka</option>
+        <option value="F" data-title="Negeri Sembilan">Negeri Sembilan</option>
+        <option value="G" data-title="Pahang">Pahang</option>
+        <option value="H" data-title="Pulau Pinang">Pulau Pinang</option>
+        <option value="I" data-title="Perak">Perak</option>
+        <option value="J" data-title="Perlis">Perlis</option>
+        <option value="K" data-title="Selangor">Selangor</option>
+        <option value="L" data-title="Terengganu">Terengganu</option>
+        <option value="M" data-title="Kuala Lumpur">Kuala Lumpur</option>
+        <option value="N" data-title="Sabah">Sabah</option>
+        <option value="O" data-title="Sarawak">Sarawak</option>  
+        <option value="P" data-title="Seluruh Malaysia">Seluruh Malaysia</option>
+    </select>
+    <div class="panel">
+        <div class="panel-heading">
+            <h4 id="chart-title-lembu-populasi" style="text-align:center"></h4>
+        </div>
+        <div id="chart_div_lembu_populasi"></div>
+    </div>    
+</div>

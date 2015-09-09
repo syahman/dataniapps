@@ -5,13 +5,31 @@
      >
     <header data-role="header">
         <div data-role="navbar">
+            <!--<a data-align="left" class="primaryBtn" href="#addGroupView" data-icon="delete" data-role="button" data-bind="events:{click:forceNoneEditModeIfNeeded}"></a>-->
+            <!--<a data-align="left" class="editGroupBtn defaultBtn" data-role="button" data-bind="events:{click:editMode},invisible:hasGroups"><span data-bind="text: editButtonText">edit</span></a>-->
             <a data-align="left" class="primaryBtn" data-icon="home" data-role="backbutton"></a>
             <span data-role="view-title">Kerbau</span>
             <!--<a data-align="right" class="primaryBtn" href="#addGroupView" data-icon="delete" data-role="button" data-bind="events:{click:forceNoneEditModeIfNeeded}"></a>-->
         </div>
     </header>
-
-
-    <div>Kerbau</div>
-
+    <div class="module-card-wrap">
+        <div class="module-card">
+            <div class="module-card-bottom">
+                <img src="http://placehold.it/400x150" alt="cheesecake" class="module-card-img" />
+                <a href="#maklumatKerbauView" class="module-card-button">Maklumat Ternakan Kerbau</a>
+            </div>
+        </div>
+        <div class="module-card">
+            <div class="module-card-bottom">
+                <img src="http://placehold.it/400x150" alt="cheesecake" class="module-card-img" />
+                <a href="#populasiKerbauView" class="module-card-button">Populasi Ternakan Kerbau</a>
+            </div>
+        </div>
+        <div class="module-card">
+            <div class="module-card-bottom">
+                <img src="http://placehold.it/400x150" alt="cheesecake" class="module-card-img" />  
+                <a href="#keseluruhanKerbauView" class="module-card-button">Populasi Ternakan Kerbau Di Malaysia</a>
+            </div>
+        </div>              
+    </div> <!-- /module-card-wrap -->
 </div>
