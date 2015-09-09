@@ -71,6 +71,13 @@ gulp.task('buildFromDev', function () {
         .pipe(gulp.dest('./wwwProd'));
 });
 
+gulp.task('moveImages', function(){
+    return gulp.src(['./wwwDev/images/**/*.*'])
+        .pipe(gulp.dest('./wwwProd/images'));
+});
+
+
+
 gulp.task('moveKendoImages', function(){
     return gulp.src(['./wwwDev/bower_components/kendo-ui/styles/images/**/*.*'])
         .pipe(gulp.dest('./wwwProd/thirdparty/images'));
@@ -170,6 +177,6 @@ gulp.task('dev', function(callback) {
 });
 
 gulp.task('prod', function(callback) {
-    runSequence('cleanProd','buildFromDev','cssLint','htmlHint','jsHint','minifyHtml','minifyCss','minifyJs','moveKendoImages','moveKendoFlatTheme','moveBootstrapCSSStuff','reportSize','startProductionServer', callback);
+    runSequence('cleanProd','buildFromDev','cssLint','htmlHint','jsHint','minifyHtml','minifyCss','minifyJs','moveImages','moveKendoImages','moveKendoFlatTheme','moveBootstrapCSSStuff','reportSize','startProductionServer', callback);
     return false;
 });
