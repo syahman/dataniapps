@@ -1,211 +1,225 @@
 <!DOCTYPE html>
 <html>
-<head>
+    <head>
 
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>DA-TANI</title>
-    <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>DA-TANI</title>
+        <meta charset="utf-8" />
 
-    <!-- ##### WARNING #### READ THIS ####### 
-        Comments that start with 'build' are used below by gulp to concatenate files during prod build. 
-        Careful not to remove build: comments or the final build will break.
-    -->
+        <!-- ##### WARNING #### READ THIS ####### 
+            Comments that start with 'build' are used below by gulp to concatenate files during prod build. 
+            Careful not to remove build: comments or the final build will break.
+        -->
 
-    <!-- CSS include order matters, don't change it! 
-        Order is: bootstrap > kendo > kendoOverides > bootstrapOverrides > whatsername > view CSS 
-    -->
+        <!-- CSS include order matters, don't change it! 
+            Order is: bootstrap > kendo > kendoOverides > bootstrapOverrides > whatsername > view CSS 
+        -->
 
-    <!-- build:css /thirdparty/thirdparty.css -->
+        <!-- build:css /thirdparty/thirdparty.css -->
 
-    <link href="/bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet"/>
-    <link href="/bower_components/kendo-ui/src/styles/mobile/kendo.mobile.common.css" rel="stylesheet"/>
-    <link href="/bower_components/kendo-ui/src/styles/mobile/kendo.mobile.flat.css" rel="stylesheet"/>
+        <link href="/bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet"/>
+        <link href="/bower_components/kendo-ui/src/styles/mobile/kendo.mobile.common.css" rel="stylesheet"/>
+        <link href="/bower_components/kendo-ui/src/styles/mobile/kendo.mobile.flat.css" rel="stylesheet"/>
 
-    <!-- endbuild -->
+        <!-- endbuild -->
 
-    <!-- build:css datani.css -->
+        <!-- build:css datani.css -->
 
-    <!-- globals CSS -->
-    <link href="/shared/css/kendoOverides.css" rel="stylesheet"/>
-    <link href="/shared/css/bootstrapOverides.css" rel="stylesheet"/>
-    <link href="/shared/css/datani.css" rel="stylesheet"/> <!-- i.e. global css -->
+        <!-- globals CSS -->
+        <link href="/shared/css/kendoOverides.css" rel="stylesheet"/>
+        <link href="/shared/css/bootstrapOverides.css" rel="stylesheet"/>
+        <link href="/shared/css/datani.css" rel="stylesheet"/> <!-- i.e. global css -->
 
-    <!-- views CSS -->
-     <!--<link href="/ui/appInfo/appInfo.css" rel="stylesheet"/>-->
-     <!--<link href="/ui/nameViewer/viewer/viewer.css" rel="stylesheet"/>-->
-     <!--<link href="/ui/groups/groupList/groupList.css" rel="stylesheet"/>-->
-     
-     <!-- datani views CSS -->
+        <!-- views CSS -->
+        <!--<link href="/ui/appInfo/appInfo.css" rel="stylesheet"/>-->
+        <!--<link href="/ui/nameViewer/viewer/viewer.css" rel="stylesheet"/>-->
+        <!--<link href="/ui/groups/groupList/groupList.css" rel="stylesheet"/>-->
 
-     <!-- layouts CSS -->
-     <link href="/shared/layouts/global/globalLayout.css" rel="stylesheet"/>
-     
-     
-     
-     
-     <link href="/ui/welcome/welcome.css" rel="stylesheet"/>
-     
+        <!-- datani views CSS -->
 
-    <!-- endbuild -->
+        <!-- layouts CSS -->
+        <link href="/shared/layouts/global/globalLayout.css" rel="stylesheet"/>
 
-</head>
-<body>
 
-    <!-- 
-    Below are templates, views, and layouts (included using gulp plugin during dev)
 
-    Order is: templates > views > layouts
-    -->
 
-    <!-- templates -->
-    <!--@@include('./ui/groups/groupList/groupListItemTemplate.html')-->
-    <!--@@include('./ui/nameViewer/viewer/scrollerTemplate.html')-->
+        <link href="/ui/welcome/welcome.css" rel="stylesheet"/>
 
-    <!-- views -->
- 
-   <!-- datani views -->
+
+        <!-- endbuild -->
+
+    </head>
+    <body>
+
+        <!-- 
+        Below are templates, views, and layouts (included using gulp plugin during dev)
     
-    <!-- ayam itik -->
-    @@include('./ui/ayam/ayamListView.html')
-    
-    
-      
-    <!-- bebiri/kambing -->
-    @@include('./ui/bebiri/bebiriListView.html')
-    
-    
-     
-    <!-- dashboard -->
-    @@include('./ui/dashboard/dashboardView.html')
-    
-     
-    <!-- fakta menarik -->
-     @@include('./ui/fakta/faktaListView.html')
-     
-    <!-- ikan -->
-    @@include('./ui/ikan/ikanListView.html')
-    
-      <!-- kambing -->
-    @@include('./ui/kambing/kambingListView.html')
-    
-    
-      <!-- komoditi -->
-    @@include('./ui/komoditi/komoditiListView.html'
-    
-    
-    <!-- kredit -->
-    @@include('./ui/kredit/kreditListView.html'
-    
-    
-    <!-- persatuan -->
-    @@include('./ui/persatuan/persatuanListView.html'
-    
-   
-    <!-- pasar tani -->
-    @@include('./ui/ptani/ptaniListView.html'
-    
-    <!-- sayuran -->
-    @@include('./ui/sayuran/sayuranListView.html'
-    
-    <!-- welcome -->
-    @@include('./ui/welcome/welcomeView.html')
-   
-    
+        Order is: templates > views > layouts
+        -->
 
-    <!-- global layouts -->
-    @@include('./shared/layouts/global/globalLayout.html')
+        <!-- templates -->
+        <!--@@include('./ui/groups/groupList/groupListItemTemplate.html')-->
+        <!--@@include('./ui/nameViewer/viewer/scrollerTemplate.html')-->
 
-<!-- JS include order matters, don't change it!
-     Order is: namespace > jQuery > BOWER STUFF > kendo > utilities > models > viewModels > run app 
- -->
+        <!-- views -->
 
-<!-- APP Namespace -->
+        <!-- datani views -->
 
-<script> this.datani = this.dt = {}; //long and shortcut namespace </script>
-
-<!-- build:js /thirdparty/thirdparty.js : Must run before utilities, models, and viewModels-->
-
-<script src="/bower_components/jquery/dist/jquery.js"></script>
-<script src="/bower_components/canvasResize/binaryajax.js"></script>
-<script src="/bower_components/canvasResize/exif.js"></script>
-<script src="/bower_components/canvasResize/canvasResize.js"></script>
-<script src="/bower_components/lodash/dist/lodash.min.js"></script>
-<script src="/bower_components/kendo-ui/src/js/kendo.ui.core.js"></script>
-
-<!-- endbuild -->
-
-<!-- build:js datani.js -->
-
-<!-- utilities : Must run before models & viewModels-->
-<script src="/shared/utilities/googleChart.js"></script>
-<script src="/shared/utilities/cloudinary.js"></script>
-
-<!-- models  : Must run before viewModels-->
-<!-- db call -->
-<!--<script src="/shared/models/groupModel.js"></script>-->
-<!--<script src="/shared/models/viewerModel.js"></script>-->
-
-<!-- viewModels  -->
-<!--<script src="/ui/groups/groupList/groupListViewModel.js"></script>-->
-<!--<script src="/ui/groups/addGroup/addGroupViewModel.js"></script>-->
-<!--<script src="/ui/nameViewer/viewer/viewerViewModel.js"></script>-->
-<!--<script src="/ui/nameViewer/addName/addNameViewModel.js"></script>-->
-
-
-<!-- ayam --> 
-<script src="/ui/ayam/ayamListView.js"></script>
-
-<!-- bebiri --> 
-<script src="/ui/bebiri/bebiriListView.js"></script>
-
-<!-- dashboard --> 
-<script src="/ui/dashboard/dashboardView.js"></script>
-
-<!-- fakta --> 
-<script src="/ui/fakta/faktaListView.js"></script>
-
-<!-- ikan --> 
-<script src="/ui/ikan/ikanListView.js"></script>
-
-
-<!-- kambing --> 
-<script src="/ui/kambing/kambingListView.js"></script>
-
-<!-- komoditi --> 
-<script src="/ui/komoditi/komoditiListView.js"></script>
-
-<!-- kredit --> 
-<script src="/ui/kredit/kreditListView.js"></script>
-
-<!-- persatuan --> 
-<script src="/ui/persatuan/persatuanListView.js"></script>
-
-<!-- pasar tani --> 
-<script src="/ui/ptani/ptaniListView.js"></script>
-
-
-<!-- sayuran --> 
-<script src="/ui/sayuran/sayuranListView.js"></script>
-
-<!-- welcome --> 
-<script src="/ui/welcome/welcomeView.js"></script>
+        <!-- ayam itik -->
+        @@include('./ui/ayam/ayamListView.html')
 
 
 
-<!-- endbuild -->
+        <!-- bebiri/kambing -->
+        @@include('./ui/bebiri/bebiriListView.html')
 
-<!-- run application  -->
-<script>
-dt.app = new kendo.mobile.Application(document.body, { //document.body is default, but I'm being explicit
-    skin: 'flat',
-    initial: 'welcomeView', // splash screen and apps information
-    init: function() {
-        //fix mouse events in iOS don't do it for android, causes more issues than it fixes
-        kendo.UserEvents.defaultThreshold(kendo.support.mobileOS.device === 'android' ? 0:20);
-        
-    }
-});
-</script>
 
-</body>
+
+        <!-- dashboard -->
+        @@include('./ui/dashboard/dashboardView.html')
+
+
+        <!-- fakta menarik -->
+        @@include('./ui/fakta/faktaListView.html')
+
+        <!-- ikan -->
+        @@include('./ui/ikan/ikanListView.html')
+
+        <!-- kambing -->
+        @@include('./ui/kambing/kambingListView.html')
+        @@include('./ui/kambing/maklumatKambingView.html')
+        @@include('./ui/kambing/populasiKambingView.html')
+        @@include('./ui/kambing/keseluruhanKambingView.html')
+
+        <!-- bebiri -->
+        @@include('./ui/bebiri/bebiriListView.html')
+        @@include('./ui/bebiri/maklumatBebiriView.html')
+        @@include('./ui/bebiri/populasiBebiriView.html')
+        @@include('./ui/bebiri/keseluruhanBebiriView.html')
+
+        <!-- lembu -->
+        @@include('./ui/lembu/lembuListView.html')    
+
+        <!-- kerbau -->
+        @@include('./ui/kerbau/kerbauListView.html')    
+
+        <!-- komoditi -->
+        @@include('./ui/komoditi/komoditiListView.html'
+
+
+        <!-- kredit -->
+        @@include('./ui/kredit/kreditListView.html'
+
+
+        <!-- persatuan -->
+        @@include('./ui/persatuan/persatuanListView.html'
+
+
+        <!-- pasar tani -->
+        @@include('./ui/ptani/ptaniListView.html'
+
+        <!-- sayuran -->
+        @@include('./ui/sayuran/sayuranListView.html'
+
+        <!-- welcome -->
+        @@include('./ui/welcome/welcomeView.html')
+
+
+
+        <!-- global layouts -->
+        @@include('./shared/layouts/global/globalLayout.html')
+
+        <!-- JS include order matters, don't change it!
+             Order is: namespace > jQuery > BOWER STUFF > kendo > utilities > models > viewModels > run app 
+        -->
+
+        <!-- APP Namespace -->
+
+        <script> this.datani = this.dt = {}; //long and shortcut namespace </script>
+
+        <!-- build:js /thirdparty/thirdparty.js : Must run before utilities, models, and viewModels-->
+
+        <script src="/bower_components/jquery/dist/jquery.js"></script>
+        <script src="/bower_components/canvasResize/binaryajax.js"></script>
+        <script src="/bower_components/canvasResize/exif.js"></script>
+        <script src="/bower_components/canvasResize/canvasResize.js"></script>
+        <script src="/bower_components/lodash/dist/lodash.min.js"></script>
+        <script src="/bower_components/kendo-ui/src/js/kendo.ui.core.js"></script>
+
+        <!-- endbuild -->
+
+        <!-- build:js datani.js -->
+
+        <!-- utilities : Must run before models & viewModels-->
+        <script src="/shared/utilities/googleChart.js"></script>
+        <script src="/shared/utilities/cloudinary.js"></script>
+
+        <!-- models  : Must run before viewModels-->
+        <!-- db call -->
+        <!--<script src="/shared/models/groupModel.js"></script>-->
+        <!--<script src="/shared/models/viewerModel.js"></script>-->
+
+        <!-- viewModels  -->
+        <!--<script src="/ui/groups/groupList/groupListViewModel.js"></script>-->
+        <!--<script src="/ui/groups/addGroup/addGroupViewModel.js"></script>-->
+        <!--<script src="/ui/nameViewer/viewer/viewerViewModel.js"></script>-->
+        <!--<script src="/ui/nameViewer/addName/addNameViewModel.js"></script>-->
+
+
+        <!-- ayam --> 
+        <script src="/ui/ayam/ayamListView.js"></script>
+
+        <!-- bebiri --> 
+        <script src="/ui/bebiri/bebiriListView.js"></script>
+
+        <!-- dashboard --> 
+        <script src="/ui/dashboard/dashboardView.js"></script>
+
+        <!-- fakta --> 
+        <script src="/ui/fakta/faktaListView.js"></script>
+
+        <!-- ikan --> 
+        <script src="/ui/ikan/ikanListView.js"></script>
+
+
+        <!-- kambing --> 
+        <script src="/ui/kambing/kambingListView.js"></script>
+
+        <!-- komoditi --> 
+        <script src="/ui/komoditi/komoditiListView.js"></script>
+
+        <!-- kredit --> 
+        <script src="/ui/kredit/kreditListView.js"></script>
+
+        <!-- persatuan --> 
+        <script src="/ui/persatuan/persatuanListView.js"></script>
+
+        <!-- pasar tani --> 
+        <script src="/ui/ptani/ptaniListView.js"></script>
+
+
+        <!-- sayuran --> 
+        <script src="/ui/sayuran/sayuranListView.js"></script>
+
+        <!-- welcome --> 
+        <script src="/ui/welcome/welcomeView.js"></script>
+
+
+
+        <!-- endbuild -->
+
+        <!-- run application  -->
+        <script>
+            dt.app = new kendo.mobile.Application(document.body, {//document.body is default, but I'm being explicit
+                skin: 'flat',
+                initial: 'welcomeView', // splash screen and apps information
+                init: function () {
+                    //fix mouse events in iOS don't do it for android, causes more issues than it fixes
+                    kendo.UserEvents.defaultThreshold(kendo.support.mobileOS.device === 'android' ? 0 : 20);
+
+                }
+            });
+        </script>
+
+    </body>
 </html>

@@ -68,4 +68,12 @@
     min-width: 0;
   }
 }
-
+/*
+* Zaki
+*/
+a.module-card-button,
+a.module-card-button:hover{
+    color: #FFFFFF;
+    text-align: center;
+    text-decoration: none;
+}

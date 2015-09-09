@@ -1,18 +1,35 @@
 <div id="bebiriListView" 
-data-role="view" 
-data-layout="default" 
+     data-role="view" 
+     data-layout="default" 
 
->
-	<header data-role="header">
-		<div data-role="navbar">
-                    <!--<a data-align="left" class="primaryBtn" href="#addGroupView" data-icon="delete" data-role="button" data-bind="events:{click:forceNoneEditModeIfNeeded}"></a>-->
-			<!--<a data-align="left" class="editGroupBtn defaultBtn" data-role="button" data-bind="events:{click:editMode},invisible:hasGroups"><span data-bind="text: editButtonText">edit</span></a>-->
-			<span data-role="view-title">DA-TANI</span>
-			<!--<a data-align="right" class="primaryBtn" href="#addGroupView" data-icon="delete" data-role="button" data-bind="events:{click:forceNoneEditModeIfNeeded}"></a>-->
-		</div>
-	</header>
-
-	
-       <div>Bebiri</div>
-    
+     >
+    <header data-role="header">
+        <div data-role="navbar">
+            <!--<a data-align="left" class="primaryBtn" href="#addGroupView" data-icon="delete" data-role="button" data-bind="events:{click:forceNoneEditModeIfNeeded}"></a>-->
+            <!--<a data-align="left" class="editGroupBtn defaultBtn" data-role="button" data-bind="events:{click:editMode},invisible:hasGroups"><span data-bind="text: editButtonText">edit</span></a>-->
+            <a data-align="left" class="primaryBtn" data-icon="home" data-role="backbutton"></a>
+            <span data-role="view-title">Bebiri</span>
+            <!--<a data-align="right" class="primaryBtn" href="#addGroupView" data-icon="delete" data-role="button" data-bind="events:{click:forceNoneEditModeIfNeeded}"></a>-->
+        </div>
+    </header>
+    <div class="module-card-wrap">
+        <div class="module-card">
+            <div class="module-card-bottom">
+                <img src="http://placehold.it/400x150" alt="cheesecake" class="module-card-img" />
+                <a href="#maklumatBebiriView" class="module-card-button">Maklumat Ternakan Bebiri</a>
+            </div>
+        </div>
+        <div class="module-card">
+            <div class="module-card-bottom">
+                <img src="http://placehold.it/400x150" alt="cheesecake" class="module-card-img" />
+                <a href="#populasiBebiriView" class="module-card-button">Populasi Ternakan Bebiri</a>
+            </div>
+        </div>
+        <div class="module-card">
+            <div class="module-card-bottom">
+                <img src="http://placehold.it/400x150" alt="cheesecake" class="module-card-img" />  
+                <a href="#keseluruhanBebiriView" class="module-card-button">Populasi Ternakan Bebiri Di Malaysia</a>
+            </div>
+        </div>              
+    </div> <!-- /module-card-wrap -->
 </div>
