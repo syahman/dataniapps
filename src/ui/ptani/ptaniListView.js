@@ -13,6 +13,24 @@
             return rex.test($(this).text());
         }).show();
     });
+    
+    $("body").on("click", ".list-group-item", function () {
+        console.log($(this).data('lat') + '::' + $(this).data('long'));
+        $('#cuacaPtani').html('');
+        var lat = $(this).data('lat'), long = $(this).data('long');
+            var urlW = 'http://api.openweathermap.org/data/2.5/weather?lat=' + lat + '&lon=' + long;
+            $.getJSON(urlW, function (dataWeather) {
+                var w = dataWeather.weather[0];
+                $('#btnGoPtani').html(
+                        '<a href="geo://' + lat + ',' + long + '" class="btn btn-success">' +
+                        '<span class="fa fa-location-arrow"></span> Go' +
+                        '</a>');
+                $('#cuacaPtani').html(
+                        '<h4><b>' + w.main + '</b></h4>' +
+                        '<br /><img src="http://openweathermap.org/img/w/' + w.icon + '.png" alt="' + w.description + '">' +
+                        '<br />' + w.description);
+            });
+    });
 
 })(dt); //pass in global name ̰space
 
@@ -25,19 +43,18 @@ function createList(worksheetID) {
     var url = "https://spreadsheets.google.com/feeds/list/" + spreadsheetID + "/" + worksheetID + "/public/values?alt=json";
     $.getJSON(url, function (data) {
         var bil = 1;
-        var list = '';
+        var modal = '', list = '';
         var entry = data.feed.entry;
         $(entry).each(function () {
-            list += '<div id="listPtani_' + (bil++) + '" class="list-ptani list-group-item" style="padding: 8px;">' +
-                    '<b>Pasar Tani ' + this.gsx$tempat.$t + '</b>';
-            if (worksheetID === "o35xmrb") {
-                list += '<span class="pull-right">' +
-                        '<a href="geo://' + this.gsx$latitude.$t + ',' + this.gsx$longitude.$t + '">' +
-                        '<span class="fa fa-5x fa-location-arrow"></span>' +
-                        '</a></span>';
+            if (typeof this.gsx$latitude !== 'undefined' || this.gsx$latitude !== '') {
+                modal = 'data-lat="' + this.gsx$latitude.$t + '" data-long="' + this.gsx$longitude.$t + '"' +
+                        ' data-toggle="modal" data-target="#ptaniCuacaModal"';
             }
-            list += '<br />Lokasi: ' + this.gsx$lokasi.$t + '<br />' +
-                    'Operasi: ' + this.gsx$hari.$t + ', ' + this.gsx$waktuoperasi.$t +
+            list += '<div id="listPtani_' + (bil++) + '" class="list-ptani list-group-item" style="padding: 8px;" ' +
+                    modal + '>' +
+                    '<b>Pasar Tani ' + this.gsx$tempat.$t + '</b>' +
+                    '<br />Lokasi: ' + this.gsx$lokasi.$t + '<br />' + 
+                    'Operasi: ' + this.gsx$hari.$t + ', ' + this.gsx$waktuoperasi.$t + '<br />' +
                     '</div>';
         });
         $('#dataListPtani').html(list);
