@@ -29,11 +29,11 @@
   background-color: #1a237e;
 }
 .km-flat .km-button {
-  background-color: #3f51b5;
+  background-color: green;
   color: #ffffff;
 }
 .km-flat .km-view .km-navbar {
-  background-color: #3f51b5;
+  background-color: green;
   color: #ffffff;
 }
 .km-flat .km-view .km-navbar .km-view-title > * {
@@ -41,7 +41,7 @@
 }
 .km-flat .km-view .km-navbar .km-button {
   border: none;
-  background-color: #3f51b5;
+  background-color: green;
   color: #ffffff;
 }
 .km-flat .km-view .km-navbar .km-button:hover {
@@ -56,7 +56,8 @@
   color: #ffffff;
 }
 .km-flat .km-view .km-content {
-  background-color: #ffffff;
+  background-color: green;
+  background: url('/images/datanibg.png');
   color: #4c5356;
 }
 .km-flat .km-view .km-content .km-list > li {
@@ -72,7 +73,7 @@
   border-bottom-width: 1px;
 }
 .km-flat .km-view .km-content .km-list > li .km-switch .km-switch-container {
-  background-color: #3f51b5;
+  background-color: green;
 }
 .km-flat .km-view .km-content .km-list .km-state-active .km-listview-link {
   background-color: #1a237e;
@@ -85,7 +86,7 @@
   background-color: #fff;
 }
 .km-flat .km-view .km-content .km-button {
-  background-color: #3f51b5;
+  background-color: green;
 }
 .km-flat .km-view .km-content .km-button.km-state-active {
   background-color: #1a237e;
@@ -104,10 +105,10 @@
   color: #ffffff;
 }
 .km-flat .km-view .km-content .km-switch .km-switch-container .km-switch-label-on {
-  background-color: #3f51b5;
+  background-color: green;
 }
 .km-flat .km-view .km-tabstrip .km-button {
-  background-color: #3f51b5;
+  background-color: green;
 }
 .km-flat .km-view .km-tabstrip .km-button.km-state-active {
   background-color: #1a237e;
@@ -123,7 +124,7 @@
   color: #4c5356;
 }
 .km-flat .km-actionsheet > li {
-  border-color: #3f51b5;
+  border-color: green;
   border-style: solid;
   border-width: 0 0px 1px 0px;
 }
@@ -144,13 +145,13 @@
   background-color: #ffffff;
 }
 .km-flat .km-switch-background {
-  background-color: #3f51b5;
+  background-color: green;
 }
 .km-flat .km-touch-scrollbar {
-  background-color: #3f51b5;
+  background-color: green;
 }
 .km-flat .km-pages .km-current-page {
-  background-color: #3f51b5;
+  background-color: green;
 }
 .km-widgets:after,
 .km-widgets:before {
@@ -168,15 +169,15 @@
  }
 
  
- 
- 
+/* iconmoon */  
+
 @font-face {
 	font-family: 'icomoon';
-	src:url('/fonts/icomoon.eot?dq7k9u');
-	src:url('/fonts/icomoon.eot?#iefixdq7k9u') format('embedded-opentype'),
-		url('/fonts/icomoon.ttf?dq7k9u') format('truetype'),
-		url('/fonts/icomoon.woff?dq7k9u') format('woff'),
-		url('/fonts/icomoon.svg?dq7k9u#icomoon') format('svg');
+	src:url('/fonts/icomoon.eot?-egp3ae');
+	src:url('/fonts/icomoon.eot?#iefix-egp3ae') format('embedded-opentype'),
+		url('/fonts/icomoon.ttf?-egp3ae') format('truetype'),
+		url('/fonts/icomoon.woff?-egp3ae') format('woff'),
+		url('/fonts/icomoon.svg?-egp3ae#icomoon') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -195,6 +196,24 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
+.icon-cow-black:before {
+	content: "\e60d";
+}
+.icon-sheep-black:before {
+	content: "\e60e";
+}
+.icon-bull-black:before {
+	content: "\e60f";
+}
+.icon-info:before {
+	content: "\e60a";
+}
+.icon-pig:before {
+	content: "\e60b";
+}
+.icon-chicken-black:before {
+	content: "\e60c";
+}
 .icon-carrot:before {
 	content: "\e600";
 }
@@ -225,8 +244,3 @@
 .icon-marketing:before {
 	content: "\e609";
 }
-
-
-
-
-

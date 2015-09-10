@@ -11,9 +11,9 @@
 
     <!--<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
     Load the AJAX API-->
-    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+   
     <script type="text/javascript">
-        google.load('visualization', '1.0', {'packages': ['corechart', 'bar']});
+      
         //google.setOnLoadCallback(drawSheetName);
         function drawSheetBabiKeseluruhan(val) {
             var queryString = encodeURIComponent("SELECT A, " + val);
@@ -46,8 +46,8 @@
         }
     </script>
 
-    <select id="jenisKeseluruhan" class="form-control well-sm" style="margin: 2px; width: 95%">
-        <option>Pilhan</option>
+    <select id="jenisBabiKeseluruhan" class="form-control well-sm" style="margin: 2px; width: 95%">
+        <option>Pilihan</option>
         <option value="B" data-title="Tahun 2009">Tahun 2009</option>
         <option value="C" data-title="Tahun 2010">Tahun 2010</option>
         <option value="D" data-title="Tahun 2011">Tahun 2011</option>

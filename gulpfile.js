@@ -77,6 +77,11 @@ gulp.task('moveFonts', function(){
         .pipe(gulp.dest('./wwwProd/fonts'));
 });
 
+gulp.task('moveImages', function(){
+    return gulp.src(['./wwwDev/images/**/*.*'])
+        .pipe(gulp.dest('./wwwProd/images'));
+});
+
 
 
 gulp.task('moveKendoImages', function(){
@@ -178,6 +183,6 @@ gulp.task('dev', function(callback) {
 });
 
 gulp.task('prod', function(callback) {
-    runSequence('cleanProd','buildFromDev','cssLint','htmlHint','jsHint','minifyHtml','minifyCss','minifyJs','moveKendoImages','moveFonts','moveKendoFlatTheme','moveBootstrapCSSStuff','reportSize','startProductionServer', callback);
+    runSequence('cleanProd','buildFromDev','cssLint','htmlHint','jsHint','minifyHtml','minifyCss','minifyJs','moveKendoImages','moveFonts','moveImages','moveKendoFlatTheme','moveBootstrapCSSStuff','reportSize','startProductionServer', callback);
     return false;
 });
