@@ -82,6 +82,14 @@ gulp.task('moveImages', function(){
         .pipe(gulp.dest('./wwwProd/images'));
 });
 
+gulp.task('moveJson', function(){
+    return gulp.src(['./wwwDev/data.json'])
+        .pipe(gulp.dest('./wwwProd/data.json'));
+});
+
+
+
+
 
 
 gulp.task('moveKendoImages', function(){
@@ -183,6 +191,6 @@ gulp.task('dev', function(callback) {
 });
 
 gulp.task('prod', function(callback) {
-    runSequence('cleanProd','buildFromDev','cssLint','htmlHint','jsHint','minifyHtml','minifyCss','minifyJs','moveKendoImages','moveFonts','moveImages','moveKendoFlatTheme','moveBootstrapCSSStuff','reportSize','startProductionServer', callback);
+    runSequence('cleanProd','buildFromDev','cssLint','htmlHint','jsHint','minifyHtml','minifyCss','minifyJs','moveKendoImages','moveFonts','moveImages','moveJson','moveKendoFlatTheme','moveBootstrapCSSStuff','reportSize','startProductionServer', callback);
     return false;
 });
