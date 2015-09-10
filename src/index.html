@@ -167,6 +167,7 @@
 <script src="/shared/utilities/cloudinary.js"></script>
 <script src="/shared/utilities/bootcards.min.js" type="text/javascript"></script>
 <script src="/shared/utilities/bootstrap.min.js" type="text/javascript"></script>
+<!-- <script type="text/javascript" src="https://www.google.com/jsapi"></script>-->
 
 <!-- models  : Must run before viewModels-->
 <!-- db call -->
@@ -226,6 +227,7 @@
 
 
 
+
 <!-- endbuild -->
 
 
@@ -237,6 +239,7 @@ dt.app = new kendo.mobile.Application(document.body, { //document.body is defaul
     initial: 'dashboardView', // splash screen and apps information
     init: function() {
         //fix mouse events in iOS don't do it for android, causes more issues than it fixes
+         
         kendo.UserEvents.defaultThreshold(kendo.support.mobileOS.device === 'android' ? 0:20);
         
     }

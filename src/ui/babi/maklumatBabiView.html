@@ -11,9 +11,9 @@
 
     <!--<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
     Load the AJAX API-->
-    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+   
     <script type="text/javascript">
-            google.load('visualization', '1.0', {'packages': ['corechart']});
+        
 
             function drawSheetBabiMaklumat(val) {                
                 var queryString = encodeURIComponent("SELECT A, " + val);
@@ -50,17 +50,17 @@
 
     <select id="jenisBabiMaklumat" class="form-control well-sm" style="margin: 2px; width: 95%">
         <option>--Pilih Kategori--</option>
-        <option value="B, C" data-title="Import Babi Hidup">
-            Import Babi Hidup</option>						
-        <option value="D, E" data-title="Export Babi Hidup">
-            Export Babi Hidup</option>			
-        <option value="F, G" data-title="Import Babi Daging">
+        <option  disabled="true" class="disabled"  data-title="Import Babi Hidup">
+            Import Babi Hidup (Tiada Maklumat)</option>						
+        <option  disabled="true" class="disabled"  data-title="Export Babi Hidup">
+            Export Babi Hidup (Tiada Maklumat)</option>			
+        <option value="B, C" data-title="Import Babi Daging">
             Import Babi Daging</option>						
-        <option value="H, I" data-title="Export Babi Daging">
+        <option value="D, E" data-title="Export Babi Daging">
             Export Babi Daging</option>			             
-        <option value="J, K" data-title="Pengeluran Daging Babi Tempatan">
+        <option value="F, G" data-title="Pengeluran Daging Babi Tempatan">
             Pengeluran Daging Babi Tempatan</option>			             
-        <option value="M" data-title="Populasi Babi">Populasi Babi</option>			
+        <option value="H" data-title="Populasi Babi">Populasi Babi</option>			
 
     </select>
     <div class="panel">
