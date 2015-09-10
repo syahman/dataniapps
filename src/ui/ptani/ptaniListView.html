@@ -8,9 +8,12 @@
      data-layout="default" 
 
      >
-     <div class="panel-heading" style="background:green;">
-            <h3 class="panel-title" style="text-align: center;color:#ffffff;">Aplikasi DATANI</h3>
+    <header data-role="header">
+        <div data-role="navbar">                                  
+            <a data-role="button" href="ptaniView"  data-icon="home" data-align="left" style="border: 1; background: inherit; "></a>
+            <span data-role="view-title">Pasar Tani</span>            
         </div>
+    </header>
     
     <div>
         <h4>Senarai Pasar Tani</h4>
@@ -37,6 +40,19 @@
     <div>
         <div id="dataListPtani" class="list-group"></div>
     </div>
-    
-
+</div>
+<div class="modal fade" id="ptaniCuacaModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-header">                
+                <h4 class="modal-title" id="myModalLabel">Maklumat Cuaca Terkini</h4>
+            </div>
+            <div class="modal-body text-center" id="cuacaPtani">
+            </div>
+            <div class="modal-footer">
+                <span id="btnGoPtani"></span>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>                
+            </div>
+        </div>
+    </div>
 </div>
