@@ -17,8 +17,8 @@
     $("body").on("click", ".list-group-item", function () {
         console.log($(this).data('lat') + '::' + $(this).data('long'));
         $('#cuacaPtani').html('');
-        var lat = $(this).data('lat'), long = $(this).data('long');
-            var urlW = 'http://api.openweathermap.org/data/2.5/weather?lat=' + lat + '&lon=' + long;
+        var lat = $(this).data('lat'), long = $(this).data('long'), tempat = $(this).data('tempat');
+            var urlW = 'http://api.openweathermap.org/data/2.5/weather?units=metric&lat=' + lat + '&lon=' + long;
             $.getJSON(urlW, function (dataWeather) {
                 var w = dataWeather.weather[0];
                 $('#btnGoPtani').html(
@@ -26,9 +26,11 @@
                         '<span class="fa fa-location-arrow"></span> Go' +
                         '</a>');
                 $('#cuacaPtani').html(
-                        '<h4><b>' + w.main + '</b></h4>' +
-                        '<br /><img src="http://openweathermap.org/img/w/' + w.icon + '.png" alt="' + w.description + '">' +
-                        '<br />' + w.description);
+                        '<h3><b>' + tempat + '</b></h3>' +
+                        '<h1><img src="http://openweathermap.org/img/w/' + w.icon + '.png" alt="' + w.description + '">' +
+                        ' '+dataWeather.main.temp+'&deg;C'+
+                        '</h1><br />'+w.main);
+         
             });
     });
 
@@ -46,8 +48,8 @@ function createList(worksheetID) {
         var modal = '', list = '';
         var entry = data.feed.entry;
         $(entry).each(function () {
-            if (typeof this.gsx$latitude !== 'undefined' || this.gsx$latitude !== '') {
-                modal = 'data-lat="' + this.gsx$latitude.$t + '" data-long="' + this.gsx$longitude.$t + '"' +
+            if (typeof this.gsx$latitude !== 'undefined'){
+                modal = 'data-tempat="Pasar Tani '+this.gsx$tempat.$t + '" data-lat="' + this.gsx$latitude.$t + '" data-long="' + this.gsx$longitude.$t + '"' +
                         ' data-toggle="modal" data-target="#ptaniCuacaModal"';
             }
             list += '<div id="listPtani_' + (bil++) + '" class="list-ptani list-group-item" style="padding: 8px;" ' +
