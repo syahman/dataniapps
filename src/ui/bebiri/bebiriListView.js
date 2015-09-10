@@ -27,7 +27,7 @@
         var subtitile = $('#jenisBebiriNegeri :selected').data('title');
         $("#chart-title-bebiri-populasi").show().text("Populasi Ternakan Bebiri, 2009 - 2014 : " + subtitile);
         //console.log(value);
-        google.setOnLoadCallback(drawSheetbebiriPopulasi(value));
+        google.setOnLoadCallback(drawSheetBebiriPopulasi(value));
     });
 
     /*

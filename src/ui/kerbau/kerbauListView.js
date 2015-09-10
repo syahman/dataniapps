@@ -26,7 +26,7 @@
         var subtitile = $('#jenisKerbauNegeri :selected').data('title');
         $("#chart-title-kerbau-populasi").show().text("Populasi Ternakan Kerbau, 2009 - 2014 : " + subtitile);
         //console.log(value);
-        google.setOnLoadCallback(drawSheetkerbauPopulasi(value));
+        google.setOnLoadCallback(drawSheetKerbauPopulasi(value));
     });
 
     /*

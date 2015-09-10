@@ -27,7 +27,7 @@
         var subtitile = $('#jenisBabiNegeri :selected').data('title');
         $("#chart-title-babi-populasi").show().text("Populasi Ternakan Babi, 2009 - 2014 : " + subtitile);
         //console.log(value);
-        google.setOnLoadCallback(drawSheetbabiPopulasi(value));
+        google.setOnLoadCallback(drawSheetBabiPopulasi(value));
     });
 
     /*
