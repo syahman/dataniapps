@@ -6,14 +6,17 @@
 <div id="ptaniListView" 
      data-role="view" 
      data-layout="default" 
-
      >
+    <header data-role="header">
+        <div data-role="navbar">
+            <a data-role="button" href="#ptaniView"  data-icon="back" data-align="left" style="border: 1; background: inherit; "></a>
+            <span data-role="view-title">PASAR TANI</span>
+        </div>
+    </header>
     <div class="panel-heading">
-    <h3 class="panel-title" style="text-align: center">Aplikasi DATANI</h3>
-  </div>
-    
+        <h3 class="panel-title" style="text-align: center">Senarai Pasar Tani</h3>
+    </div>
     <div>
-        <h4>Senarai Pasar Tani</h4>
         <select id="ptaniList" class="form-control">
             <option value="o35xmrb">Mega</option>
             <option value="oghrvzy">Johor</option>
@@ -37,6 +40,6 @@
     <div>
         <div id="dataListPtani" class="list-group"></div>
     </div>
-    
+
 
 </div>
