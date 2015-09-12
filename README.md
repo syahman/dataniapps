@@ -2,14 +2,19 @@
 ==================
 
 
-Aplikasi “Da-Tani” atau Data Tani adalah aplikasi yang akan membantu para petani, penternak dan nelayan atau mereka yang berminat dengan Agro Pertanian untuk mendapatkan maklumat setempat tentang statistik, trend dan jangkaan dalam bidang pertanian.
+Aplikasi Data Tani adalah aplikasi yang akan membantu para petani, penternak dan nelayan atau mereka yang berminat dengan Agro Pertanian untuk mendapatkan maklumat setempat tentang statistik, trend dan jangkaan dalam bidang pertanian.
 
+
+![image](https://{cloud.githubusercontent.com/assets/2078663/9829914/51b2f8b2-594c-11e5-9726-d849354355a2.png})
+
+![image](https://{cloud.githubusercontent.com/assets/2078663/9829915/52a9edf2-594c-11e5-94f4-3ab3dae1d2d5.png})
+
+![image](https://{cloud.githubusercontent.com/assets/2078663/9829913/51ad4642-594c-11e5-96c9-b4f3996aa2f6.png})
+
+![image](https://{cloud.githubusercontent.com/assets/2078663/9829912/51567524-594c-11e5-8168-117d93e56373.png})
 
 DA-TANI SKELETON (KENDO UI MOBILE) 
 
-Instruction to team #codehijau. 
-
-This is not a complete skeleton yet. I will update all the structure. But, basically it's already resembled our apps layout. 
 
 
 ## Prerequisites to run/build app
