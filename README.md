@@ -17,6 +17,13 @@ Aplikasi Data Tani adalah aplikasi yang akan membantu para petani, penternak dan
 Aplikasi ini dibangunkan dengan menggunakan Kendo UI Core (Mobile) dan Cordova. 
 Sila ikut arahan pemasangan (in English).
 
+Aplikasi ini dibangunkan bersempena pertandingan "33 Jam HACKATHON: Data Terbuka Sektor Awam" anjuran 
+Unit Pemodenan Tadbiran dan Perancangan Pengurusan (MAMPU) dengan kerjasama Telekom Malaysia Berhad, 
+GITN Sdn Bhd dan Multimedia Development Corporation (MDeC).
+
+Aplikasi ini dibangunkan oleh kumpulan #codehijau yang diangotai oleh 4 orang 
+penjawat awam daripada KDN, JPN & KPKT.
+
 
 
 ## Prerequisites to run/build app
