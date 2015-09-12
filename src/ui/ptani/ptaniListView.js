@@ -22,7 +22,7 @@
             $.getJSON(urlW, function (dataWeather) {
                 var w = dataWeather.weather[0];
                 $('#btnGoPtani').html(
-                        '<a href="geo://' + lat + ',' + long + '" class="btn btn-success">' +
+                        '<a href="geo:' + lat + ',' + long + '" data-rel="external" class="btn btn-success">' +
                         '<span class="fa fa-location-arrow"></span> Go' +
                         '</a>');
                 $('#cuacaPtani').html(
