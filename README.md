@@ -11,6 +11,13 @@ GITN Sdn Bhd dan Multimedia Development Corporation (MDeC).
 Aplikasi ini dibangunkan oleh kumpulan #codehijau yang diangotai oleh 4 orang 
 penjawat awam daripada KDN, JPN & KPKT.
 
+PENAFIAN:
+==================
+Pihak pembangun Data Tani tidak bertanggungjawab terhadap sebarang kehilangan atau 
+kerosakan yang dialami kerana menggunakan maklumat dalam aplikasi ini. Data yang diambil dari 
+laman Data Terbuka Sektor Awam (data.gov.my) adalah hak milik Kerajaan Malaysia. 
+Terma dan Syarat penggunaannya boleh dirujuk di [pautan ini](http://data.gov.my/folders/others/Terma_Penggunaan_Data_Terbuka_01042015.pdf) 
+
 
 ![image](https://cloud.githubusercontent.com/assets/2078663/9829914/51b2f8b2-594c-11e5-9726-d849354355a2.png)
 
