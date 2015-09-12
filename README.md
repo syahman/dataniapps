@@ -13,7 +13,9 @@ Aplikasi Data Tani adalah aplikasi yang akan membantu para petani, penternak dan
 
 ![image](https://cloud.githubusercontent.com/assets/2078663/9829912/51567524-594c-11e5-8168-117d93e56373.png)
 
-DA-TANI SKELETON (KENDO UI MOBILE) 
+
+Aplikasi ini dibangunkan dengan menggunakan Kendo UI Core (Mobile) dan Cordova. 
+Sila ikut arahan pemasangan (in English).
 
 
 
