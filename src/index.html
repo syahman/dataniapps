@@ -2,6 +2,10 @@
 <html>
 <head>
 
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src * 'self' 'unsafe-inline'; media-src *; script-src * 'self' 'unsafe-inline' 'unsafe-eval'; frame-src *; connect-src *"">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>DA-TANI</title>
     <meta charset="utf-8" />
@@ -29,15 +33,15 @@
 
     <!-- endbuild -->
 
-    <!-- build:css datani.css -->
+    <!-- build:css dataninew.css -->
 
     <!-- globals CSS -->
     
     
     <link href="/shared/css/kendoOverides.css" rel="stylesheet"/>
     <link href="/shared/css/bootstrapOverides.css" rel="stylesheet"/>
-    <link href="/shared/css/datani.css" rel="stylesheet"/> <!-- i.e. global css -->
-   
+    <link href="/shared/css/datani.css" rel="stylesheet"/> 
+    
     
     
     <!-- views CSS -->
@@ -48,14 +52,10 @@
      <!-- datani views CSS -->
 
      <!-- layouts CSS -->
-     <link href="/shared/layouts/global/globalLayout.css" rel="stylesheet"/>
-     
-     
-     
-     
-     <link href="/ui/welcome/welcome.css" rel="stylesheet"/>
+     <link href="/shared/css/globalforlayout.css" rel="stylesheet"/>
      <link href="/ui/dashboard/dashboard.css" rel="stylesheet"/>
-    <link href="ui/fakta/fakta.css" rel="stylesheet" type="text/css"/>
+     <link href="ui/fakta/fakta.css" rel="stylesheet" type="text/css"/>
+    
     <!-- endbuild -->
 
 </head>
@@ -135,18 +135,20 @@
     @@include('./ui/persatuan/persatuanListView.html')
     
     
-     @@include('./ui/ptani/ptaniListView.html')
-       @@include('./ui/ptani/ptaniMegaMapView.html')
-       @@include('./ui/ptani/ptaniView.html')   
+    @@include('./ui/ptani/ptaniListView.html')
+    @@include('./ui/ptani/ptaniMegaMapView.html')
+    @@include('./ui/ptani/ptaniView.html')   
      
    
-    @@include('./ui/sayuran/sayuranListView.html')
-    @@include('./ui/welcome/welcomeView.html')
+   
+   
    
     
 
     <!-- global layouts -->
     @@include('./shared/layouts/global/globalLayout.html')
+    
+    
 
 <!-- JS include order matters, don't change it!
      Order is: namespace > jQuery > BOWER STUFF > kendo > utilities > models > viewModels > run app 
@@ -173,10 +175,12 @@
 <!-- build:js datani.js -->
 
 <!-- utilities : Must run before models & viewModels-->
+<script src="/shared/utilities/extend.js"></script>
 <script src="/shared/utilities/googleChart.js"></script>
 <script src="/shared/utilities/cloudinary.js"></script>
 <script src="/shared/utilities/bootcards.min.js" type="text/javascript"></script>
 <script src="/shared/utilities/bootstrap.min.js" type="text/javascript"></script>
+
 <!-- <script type="text/javascript" src="https://www.google.com/jsapi"></script>-->
 
 <!-- models  : Must run before viewModels-->
@@ -231,9 +235,9 @@
 
 
 
-<script src="/ui/sayuran/sayuranListView.js"></script>
 
-<script src="/ui/welcome/welcomeView.js"></script>
+
+
 
 
 
@@ -245,6 +249,7 @@
 
 
 <!-- run application  -->
+<script type="text/javascript" src="cordova.js"></script>
 <script>
 dt.app = new kendo.mobile.Application(document.body, { //document.body is default, but I'm being explicit
     skin: 'flat',

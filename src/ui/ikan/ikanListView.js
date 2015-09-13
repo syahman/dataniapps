@@ -20,9 +20,9 @@
 
 
 
-        $("body").on("click", ".list-group-item", function () {
     $('#myModal').on('shown.bs.modal', function () {
         //$('#myInput').focus();
+        $("body").on("click", ".list-group-item", function () {
             var id = $(this).attr('id');
             $.getJSON("data.json", function (data) {
                 var table = '';
